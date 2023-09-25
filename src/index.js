@@ -1,24 +1,34 @@
-import React from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import './App.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { Route, BrowserRouter, Routes } from 'react-router-dom'
-import { CookiesProvider } from 'react-cookie';
+import './App.css';
 import Auth from './components/auth';
+import auth from './firebase/auth/index.js';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 
 function Router() {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+      onAuthStateChanged(auth, user => {
+          if (user) {
+              console.log(user)
+              setUser(user)
+          } else {
+              console.log("No user")
+              setUser(null)
+          }
+      })
+  }, [])
+
+
   return (
     <React.StrictMode>
-      <CookiesProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Auth />}/>
-            <Route path="/dashboard" element={<App />}/>
-          </Routes>
-        </BrowserRouter>
-      </CookiesProvider>
+        {
+          user ? <App user={user} /> : <Auth />
+        }
     </React.StrictMode>
   )
 }
