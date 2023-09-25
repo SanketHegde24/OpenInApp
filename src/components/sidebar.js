@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPieChart, faTag, faCalendarTimes } from '@fortawesome/free-solid-svg-icons'
 
 function Sidebar() {
     return (

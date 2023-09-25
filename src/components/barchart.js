@@ -1,10 +1,6 @@
-import { GoogleLogin } from 'react-google-login'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiscord, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Colors } from 'chart.js'
-import { Bar } from 'react-chartjs-2'
-import { Category } from '@mui/icons-material'
+import { BarElement, CategoryScale, Chart as ChartJS, Colors, LinearScale } from 'chart.js'
 import { useEffect, useState } from 'react'
+import { Bar } from 'react-chartjs-2'
 
 ChartJS.register(
     CategoryScale,

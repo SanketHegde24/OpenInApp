@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBell, faCircle } from '@fortawesome/free-solid-svg-icons'
 import Barchart from "./barchart";
 import Doughnutchart from "./doughnut";
 

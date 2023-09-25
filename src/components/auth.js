@@ -1,6 +1,3 @@
-import { GoogleLogin } from 'react-google-login'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiscord, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const clientId = '228745324744-8isp3bg6qa2qi9r3nebi5hdo3gsiv3cc.apps.googleusercontent.com'
 

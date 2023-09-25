@@ -1,10 +1,6 @@
-import { GoogleLogin } from 'react-google-login'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiscord, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Colors, ArcElement, Tooltip, Legend } from 'chart.js'
-import { Bar, Doughnut } from 'react-chartjs-2'
-import { Category } from '@mui/icons-material'
+import { ArcElement, Chart as ChartJS, Colors, Legend, Tooltip } from 'chart.js'
 import { useEffect, useState } from 'react'
+import { Doughnut } from 'react-chartjs-2'
 
 ChartJS.register(
     Legend,
