@@ -1,38 +1,343 @@
+/* *  {
+  
+  margin: 0;
+  padding: 0;
+} */
+
+@font-face {
+  font-family: monteserrat;
+  src: url(../public/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: figtree;
+  src: url(../public/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: lato;
+  src: url(../public/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../public/Poppins-Bold.ttf);
+}
+
+/* .App {
+  display: grid;
+  height: 100vh;
+  background-color: #f1f1f1de;
+  grid-template-columns: 1fr 3.5fr;
+  font-family: monteserrat;
+} */
+
+/* .sidebar {
+  margin : 40px 43px;
+  padding: 10% 15%;
+  background-color: #4285F4;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sidebar-contents {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-list p {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-list p svg {
+  margin-right: 20px;
+} */
+
 .App {
+  display: grid;
+  height: 100%;
+  background-color: #f1f1f1de;
+  grid-template-columns: 1fr 3fr;
+  font-family: monteserrat;
+}
+
+.sidebar {
+  padding: 10% 15%;
+  margin: 5%;
+  background-color: #4285F4;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  display: grid;
+  grid-template-rows: 2fr 8fr 2fr;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 70fr 30fr;
+} 
+
+.sidebar-list p {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-list p svg {
+  margin-right: 20px;
+}
+
+.navbar div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container {
+  margin: 4% 3% 5% 1%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.card {
+  background-color: white;
+  padding: 2%;
+  border-radius: 20px;
+  border: 2px #E0E0E0 solid;
+  -webkit-box-shadow: 6px 6px 79px -42px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 6px 79px -42px rgba(0,0,0,0.75);
+  box-shadow: 6px 6px 79px -42px rgba(0,0,0,0.75);
+}
+
+.row-1 .card{
+  width: 19%;
+}
+
+.row-2 {
+  margin: 3.5% 0;
+}
+
+.row-3 .card{
+  width: 44%;
+}
+
+.card p {
+  margin-bottom: 0;
+  font-size: 11px;
+  font-family: lato;
+  font-weight: 400;
+}
+
+.circle {
+  text-align: center;
+  border-radius: 50%;
+  padding: 2%;
+  border: none;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price p {
+  margin: 0;
+  margin-right: 10%;
+  font-size: 21px;
+  font-family: Open Sans;
+  font-weight: 700;
+}
+
+.capsule {
+  color: #3CC952;
+  background: #E9F9EB;
+  border-radius: 34px;
+  font-size: 10px;
+  font-family: figtree;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 16px;
+  letter-spacing: 0.50px;
+  padding: 3%;
+}
+
+.bar-graph {
+  width: 100%;
+}
+
+.search {
+  padding: 5px;
+  background-color: white;
+  border-radius: 7px;
+}
+
+input {
+  border: none;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.profile-info {
+  display: grid;
+}
+
+.btn {
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-btn {
+  border-radius: 50%;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-info p {
+  color: #858585;
+  font-size: 16px;
+  font-family: figtree;
+  font-weight: 600;
+  line-height: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+/* antDesign, d3.js */
+
+/* 228745324744-8isp3bg6qa2qi9r3nebi5hdo3gsiv3cc.apps.googleusercontent.com - clientId  */
+/* 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 - clientSecret */
+
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left-container {
+  padding: 8%;
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+  height: 100%;
   color: white;
+  background-color: #4285F4;
 }
 
-.App-link {
-  color: #61dafb;
+.login-header {
+  margin-top: 0;
+  font-size: 24px;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: 29.44px;
+  letter-spacing: 0.36px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-container h1 {
+  margin: auto;
+  text-align: center;
+  font-size: 72px;
+  font-family: monteserrat;
+  font-weight: 700;
 }
+
+.login-footer {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.login-footer svg {
+  margin: 20px;
+  margin-bottom: 0;
+}
+
+.right-container {
+  padding: 8%;
+  display: grid;
+  height: 100%;
+  background-color: #F8FAFF;
+}
+
+.login-form {
+  margin: auto;
+}
+
+.login-form .card{
+  border: none;
+  box-shadow: none;
+  padding: 10%;
+}
+
+.login-form input {
+  background-color: #EAEAEA;
+  border-radius: 5px;
+  width: 100%;
+  padding: 4%;
+  margin: 5px;
+}
+
+.login-form button {
+  background-color: #4285F4;
+  border: none;
+  color: white;
+  padding: 4%;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.login-form h2 {
+  font-size: 36px;
+  font-family: monteserrat;
+  font-weight: 700;
+  margin: 0;
+}
+
+.login-form p {
+  font-size: 16px;
+  font-family: lato;
+  font-weight: 400;
+  margin: 0;
+}
+
+.login-form span {
+  color: #858585;
+  font-size: 16px;
+  font-family: lato;
+  font-weight: 400;
+}
+
+.google-signin {
+  display: flex;
+  justify-content: space-between;
+  margin: 10% 0;
+  height: fit-content;
+}
+
+.google-signin .card {
+  display: flex;
+  border-radius: 10px;
+  padding: 1% 5%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.google-signin svg {
+  margin: 0 10px;
+}
+
+.google-signin p {
+  color: #858585;
+  font-size: 12px;
+  font-family: monteserrat;
+  font-weight: 400;
+}
+
+
