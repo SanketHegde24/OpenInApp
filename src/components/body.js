@@ -1,8 +1,15 @@
-import React from "react";
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from "@mui/material";
+import React, { useState } from "react";
 import Barchart from "./barchart";
 import Doughnutchart from "./doughnut";
 
 function Body() {
+    const [open, setOpen] = useState(false)
+
+    function handleClose() {
+        setOpen(false)
+    }
+
     return (
         <div className="body">
             <div className="row row-1">
@@ -64,7 +71,9 @@ function Body() {
                 <div className="card item">
                     <Doughnutchart />
                 </div>
-                <div className="card profile-info">
+                <div className="card profile-info" onClick={() => {
+                    setOpen(true);
+                }}>
                     <div className="btn">
                         <button className="add-btn">
                             <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,6 +83,28 @@ function Body() {
                         <p>Add Profile</p>
                     </div>
                 </div>
+                <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                    <DialogTitle>Add Profile</DialogTitle>
+                    <DialogContent>
+                        <DialogContentText>
+                            To subscribe to this website, please enter your email address here. We will send updates
+                            occasionally.
+                        </DialogContentText>
+                        <TextField
+                            autoFocus
+                            margin="dense"
+                            id="name"
+                            label="Email Address"
+                            type="email"
+                            fullWidth
+                        />
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleClose} color="primary">
+                            Cancel
+                        </Button>
+                    </DialogActions>
+                </Dialog>
             </div>
         </div>
     )
