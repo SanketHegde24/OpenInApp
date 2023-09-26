@@ -1,7 +1,4 @@
 *  {
-/*   
-  margin: 0;
-  padding: 0; */
   box-sizing: border-box;
 }
 
@@ -32,32 +29,6 @@ body {
 .App, .background-layout, .login-container {
   height: 100dvh;
 }
-
-/* .sidebar {
-  margin : 40px 43px;
-  padding: 10% 15%;
-  background-color: #4285F4;
-  border-radius: 20px;
-  color: white;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.sidebar-contents {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.sidebar-list p {
-  display: flex;
-  align-items: center;
-}
-
-.sidebar-list p svg {
-  margin-right: 20px;
-} */
 
 body {
   background-color: #F8FAFF;
@@ -125,15 +96,11 @@ body {
 }
 
 .row-1 .card{
-  width: 19%;
+  width: 225px;
 }
 
 .row-2 {
   margin: 3.5% 0;
-}
-
-.row-3 .card{
-  width: 44%;
 }
 
 .card p {
@@ -197,6 +164,7 @@ textarea:focus, input:focus{
 
 .profile-info {
   display: grid;
+  width: 500px;
 }
 
 .btn {
@@ -217,10 +185,25 @@ textarea:focus, input:focus{
   line-height: 24px;
 }
 
-/* antDesign, d3.js */
 
-/* 228745324744-8isp3bg6qa2qi9r3nebi5hdo3gsiv3cc.apps.googleusercontent.com - clientId  */
-/* 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 - clientSecret */
+.activity {
+  color: #858585;
+font-size: 14px;
+font-family: monteserrat;
+font-weight: 400;
+}
+
+.profile h4 {
+  margin: 65px 0;
+}
+
+
+
+
+/* Login Page Design */
+
+
+
 
 .login-container {
   display: grid;
@@ -353,6 +336,9 @@ textarea:focus, input:focus{
   transform: translateY(2px);
 }
 
+
+
+
 /* RESPONSIVE screen less than 600px */
 @media only screen and (max-width: 600px) {
   .login-container {
@@ -371,7 +357,6 @@ textarea:focus, input:focus{
   }
 
   .sidebar {
-    /* display: none; */
     grid-template-rows: 2fr 5fr 2fr;
   }
 

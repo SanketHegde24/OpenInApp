@@ -54,6 +54,11 @@ function Barchart() {
     ]}
 
     var options = {
+        scales: {
+            x: {
+              display: false, // Hide the x-axis grid lines and ticks
+            },
+          },
         indexAxis: 'x',
         elements: {
             bar: {
@@ -70,7 +75,7 @@ function Barchart() {
       }
     
     return (
-        <div>
+        <div style={{ height: '300px', width: '100%'}}>
             <Bar 
                 data={data}
                 options={options}

@@ -49,7 +49,6 @@ function Doughnutchart() {
             'rgba(246, 220, 125, 1)',
             'rgba(169, 176, 229, 1)'
             ],
-            borderRadius: 50,
             borderWidth: 0,
         }]
       }
@@ -70,7 +69,7 @@ function Doughnutchart() {
       }
     
     return (
-        <div style={{width: '100%', height: '100%', borderRadius: '50%'}}>
+        <div style={{width: '100%'}}>
             <Doughnut 
                 data={data}
                 options={options}

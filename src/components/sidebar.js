@@ -4,7 +4,6 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <h1>Board.</h1>
-            {/* <div className="sidebar-contents"> */}
                 <div className="sidebar-list">
                     <p>
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +43,6 @@ function Sidebar() {
                         Settings
                     </p>
                 </div>
-            {/* </div> */}
             <div className="sidebar-footer">
                 <p>Help</p>
                 <p>Contact Us</p>

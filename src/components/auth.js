@@ -1,9 +1,11 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { signInWithGoogle, signin } from "../firebase/auth/index.js"
 
 function Auth() {
     const password = useRef(null)
     const email = useRef(null)
+
+    const [ isLoginView, setIsLoginView ] = useState(true)
 
     const signIn = (e) => {
         e.preventDefault()
@@ -62,10 +64,14 @@ function Auth() {
             </div>
             <div className="right-container">
                 <form className="login-form">
-                    <h2>SIgn In</h2>
-                    <p style={{
-                        textAlign: "left"
-                    }}>Sign in to your account</p>
+                    { isLoginView ? 
+                        <><h2>Sign In</h2><p style={{
+                            textAlign: "left"
+                        }}>Sign in to your account</p></> :
+                        <><h2>Register</h2><p style={{
+                            textAlign: "left"
+                        }}>Register to create account</p></>
+                    }
                     <div className="google-signin">
                         <div className="card" tabIndex={1} onClick={signInWithGoogle}>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,9 +138,13 @@ function Auth() {
                         </button>
                     </div>
                     <p>
-                        <span>
+                        {/* <span>
                             Don't have an account?<a> Register here</a>
-                        </span>
+                        </span> */}
+                        { isLoginView ? 
+                            <p><span>Don't have an account?<a onClick={() => setIsLoginView(false)}> Register here</a></span></p> :
+                            <p><span>You already have an account?<a onClick={() => setIsLoginView(true)}> Login</a></span></p>
+                        }
                     </p>
                 </form>
             </div>
