@@ -409,6 +409,7 @@ textarea:focus, input:focus{
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    flex-wrap: wrap;
   }
 
   .row-1 .card {
