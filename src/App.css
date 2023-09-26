@@ -401,8 +401,11 @@ textarea:focus, input:focus{
     margin-right: auto;
   }
 
+  .navbar-contents svg {
+    margin-right: 15px
+  }
+
   .row {
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 1em;

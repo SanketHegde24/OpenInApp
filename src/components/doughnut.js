@@ -13,7 +13,7 @@ function Doughnutchart() {
 
     const [chart, setChart] = useState([])
 
-    var baseUrl = "https://api.coinranking.com/v2/coins/?limit=10"
+    var baseUrl = "https://api.coinranking.com/v2/coins/?limit=4"
     var proxyUrl = "https://cors-anywhere.herokuapp.com/"
     var apiKey = "coinrankingd23cac42f61870a60131d4984ca2d19323e1f3b3a5b3887f"
 
@@ -42,32 +42,35 @@ function Doughnutchart() {
         labels: chart?.coins?.map(x => x.name),
         datasets: [{
           label: `${chart?.coins?.length} Coins Available`,
-          data: chart?.coins?.map(x => x.price),
-          borderWidth: 1
+          data: chart?.coins?.map(x => x.listedAt),
+          backgroundColor: [
+            'rgba(152, 216, 158, 1)',
+            'rgba(238, 132, 132, 1)',
+            'rgba(246, 220, 125, 1)',
+            'rgba(169, 176, 229, 1)'
+            ],
+            borderRadius: 50,
+            borderWidth: 0,
         }]
       }
 
-    var options = {
-        maintainAspectRatio : false,
-        scales: {
-          y: {
-            beginAtZero: true
-          }
+      var options = {
+        indexAxis: 'x',
+        elements: {
+            bar: {
+                // borderRadius: 20,
+            },
         },
-        legend: {
-            labels: {
-                fontSize: 26
-            }
-        },
+        // responsive: true,
         plugins: {
-            colors: {
-                enabled: true
-            }
-        }
+            legend: {
+                position: 'right',
+            },
+        },
       }
     
     return (
-        <div>
+        <div style={{width: '100%', height: '100%', borderRadius: '50%'}}>
             <Doughnut 
                 data={data}
                 options={options}
